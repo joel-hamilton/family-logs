@@ -11,4 +11,4 @@ services:
       - ${FAMILY_LOGS_PORT:-3000}:3000
     command: node server.js
     volumes:
-      - ${LOGFILE_PATH:-temp.log}:/app/family.log
+      - ${LOGFILE_PATH:-./temp.log}:/app/family.log
