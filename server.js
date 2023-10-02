@@ -13,6 +13,7 @@ const server = http.createServer((req, res) => {
 
     if (bearerToken === secret) {
       parseBody(req, (body) => {
+        console.log(`Message: ${body}`)
         fs.appendFileSync("family.log", body);
       });
     } else {
