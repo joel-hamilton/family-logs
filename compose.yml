@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  family-logs:
+    environment:
+      - LOGFILE_PATH=${LOGFILE_PATH}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # restart: always
+    ports:
+      - ${FAMILY_LOGS_PORT}:3000
+    command: node server.js
+    volumes:
+      - ${LOGFILE_PATH}:/app/family.log
