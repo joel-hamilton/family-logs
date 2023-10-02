@@ -6,3 +6,5 @@ Usage:
 - ensure `jq` is installed
 - create `env.json` file
 - run `run.sh`
+
+{{scripts|nodejs|bash}}
