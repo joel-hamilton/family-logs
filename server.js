@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
     if (bearerToken === secret) {
       parseBody(req, (body) => {
         console.log(`Message: ${body}`)
-        fs.appendFileSync("family.log", body + "\n");
+        fs.appendFileSync("family.log", body);
       });
     } else {
       console.log("Invalid bearer token");
